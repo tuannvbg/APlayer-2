@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subtitle synchronization effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/APlayer.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 54px;
+            color: #333;
+            margin: 30px 0 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #555;
+        }
+
+        hr {
+            display: block;
+            width: 7rem;
+            height: 1px;
+            margin: 2.5rem 0;
+            background-color: #eee;
+            border: 0;
+        }
+
+        a {
+            color: #08c;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 18px;
+        }
+        .aplayer{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player1" class="aplayer">        
+    </div>
+    </div>
+    <script src="src/APlayer.js"></script>
+    <script>
+        var ap1 = new APlayer({
+            element: document.getElementById('player1'),
+            narrow: false,
+            autoplay: true,            
+            showlrc: 3,
+            showlrc: true,
+            music: {
+                title: 'Mỹ Nhân',
+                author: 'Đinh Đại Vũ',
+                url: 'https://dl.dropboxusercontent.com/s/0d2ooyr1d3eg3s7/Dinh.Dai.Vu-My.Nhan.mp3',
+                pic: 'https://dl.dropboxusercontent.com/s/3kabbp8bk6q5ejt/Dinh.Dai.Vu.Avatar.ZingMP3.jpg',
+                lrc: 'https://dl.dropboxusercontent.com/s/nspaber0yc7ub3v/Dinh.Dai.Vu-My.Nhan.lrc'
+            },
+            height: 600,
+            width: 1200,
+            lineHeight: 80,
+            fontSize: 70,
+            volume: 0.5
+        });
+        ap1.init();
+    </script>
+
+
+</body>
+
+</html>
